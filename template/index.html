@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đóng Học Phí TDTU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="payment-form">
+        <h2>Thanh Toán Học Phí TDTU</h2>
+        <div>
+            <label for="studentId">Mã Số Sinh Viên:</label>
+            <input type="text" id="studentId" oninput="updatePaymentInfo()">
+        </div>
+        <div>
+            <label for="studentName">Họ Tên Sinh Viên:</label>
+            <input type="text" id="studentName" disabled>
+        </div>
+        <div>
+            <label for="amount">Số Tiền Cần Nộp:</label>
+            <input type="text" id="amount" disabled>
+        </div>
+        <div>
+            <label for="balance">Số Dư Khả Dụng:</label>
+            <input type="number" id="balance" value="10000" disabled>
+        </div>
+        <div>
+            <input type="checkbox" id="agree">
+            <label for="agree">Đồng ý với các điều khoản</label>
+        </div>
+        <button id="confirmButton" disabled>Xác Nhận</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

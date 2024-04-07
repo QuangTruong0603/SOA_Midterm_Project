@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Interface</title>
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Thông Tin Nộp Học Phí</h2>
+        <form id="paymentForm">
+            <fieldset disabled>
+                
+                <label for="depositorName">Người nộp tiền:</label>
+                <input type="text" id="depositorName"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;" readonly><br>
+
+                <label for="phoneNumber">Số điện thoại:</label>
+                <input type="text" id="phoneNumber"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
+
+                <label for="email">Địa chỉ email:</label>
+                <input type="email" id="email"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;" readonly><br>
+                <label for="availableBalance">Số dư khả dụng:</label><br>
+                <input type="number" id="availableBalance"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
+            </fieldset>
+
+            <label for="studentId">Mã số sinh viên:</label>
+            <div class="search-container">
+                <input  type="text" style="width: 90%;" id="studentId" required><br>
+                <button type="button" id="btn-search-stu" class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+           
+            
+            <fieldset disabled>
+                <label for="studentName">Họ tên sinh viên:</label><br>
+                <input required type="text" id="studentName"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"><br>
+
+                <label for="tuitionFee">Số tiền cần nộp:</label><br>
+                <input required type="number" id="tuitionFee"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
+
+               
+
+            </fieldset>
+
+            <button type="submit" id="confirmButton" disabled>Xác Nhận Giao Dịch</button>
+        </form>
+    </div>
+</body>
+</html>
