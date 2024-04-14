@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TransactionService.Data;
 namespace TransactionService
 {
     public class Program
@@ -5,6 +8,8 @@ namespace TransactionService
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<TransactionServiceContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("TransactionServiceContext") ?? throw new InvalidOperationException("Connection string 'TransactionServiceContext' not found.")));
 
             // Add services to the container.
 

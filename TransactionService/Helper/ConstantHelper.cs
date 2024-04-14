@@ -1,4 +1,4 @@
-﻿namespace do_an_ck.Helper
+﻿namespace TransactionService.Helper
 {
     public class ConstantHelper
     {

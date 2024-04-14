@@ -16,5 +16,7 @@ namespace AccountStudentService.Models
         public int StudentId { get; set; }
         [JsonIgnore]
         public Student Student { get; set; }
+        public string beneId { get; set; }
+        public string beneName { get; set; }
     }
 }

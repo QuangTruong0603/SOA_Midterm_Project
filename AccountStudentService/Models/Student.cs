@@ -1,5 +1,4 @@
 ﻿
-
 namespace AccountStudentService.Models
 {
     public class Student

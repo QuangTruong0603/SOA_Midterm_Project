@@ -17,7 +17,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("phoneNumber").value = studentData.phoneNumber;
                 document.getElementById("email").value = studentData.email;
                 document.getElementById("availableBalance").value = studentData.availableBalance;
-
+                const container = document.getElementById('list-item');
+                studentData.historyTransactions.forEach(data => {
+                    const div = document.createElement('div');
+                    div.className = 'item';
+                    div.innerHTML = `
+                        <p>Thời gian: ${data.date}</p>
+                        <p>Số tiền: ${data.amount}</p>
+                        <p>Mã số sinh viên: ${data.beneId}</p>
+                        <p>Tên sinh viên: ${data.beneName}</p>
+                    `;
+                    container.appendChild(div);
+                });
                
             } else {
                 console.error("Error:", xhr.status);
@@ -87,9 +98,43 @@ document.addEventListener('DOMContentLoaded', function () {
         ) {
             alert('Vui lòng nhập đầy đủ thông tin.');
         } else {
+
+            var Info = {
+                username: localStorage.getItem("username"),
+                amount: tuitionFee,
+                email: email
+            };
+            // Gửi yêu cầu đến API
+            fetch('http://localhost:5126/OTP', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Info),
+                
+            })
+            .then(response => {
+                
+                if (!response.ok) {
+                
+                    alert("Lỗi");
+                }
+                else{
+                    localStorage.setItem('amount',tuitionFee);
+                    localStorage.setItem('beni', studentId);
+                    window.location.href = 'OTP.html';
+                    return response.json();
+                }
+                
+            })
             
-            window.location.href = 'OTP.html'
         }
     });
+    var btn_logout = document.getElementById('logout_btn');
+    btn_logout.addEventListener('click', function (event){
+        localStorage.clear();
+        window.location.href = 'login.html';
+    });
+
 });
 

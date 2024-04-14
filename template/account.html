@@ -9,50 +9,68 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 </head>
 <body>
-    <div class="form-container">
-        <h2>Thông Tin Nộp Học Phí</h2>
-        <form id="paymentForm">
-            
-              
-              <!-- Lặp lại cho mỗi nhóm label-input -->
-              
-            <fieldset disabled>
+    <div class="container">
+        <div class="form-container">
+            <h2 style="text-align: center;">Thông Tin Nộp Học Phí</h2>
+            <form id="paymentForm">
                 
-                <label for="depositorName">Người nộp tiền:</label>
-                <input type="text" id="depositorName"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;" readonly><br>
-
-                <label for="phoneNumber">Số điện thoại:</label>
-                <input type="text" id="phoneNumber"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
-
-                <label for="email">Địa chỉ email:</label>
-                <input type="email" id="email"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;" readonly><br>
-                <label for="availableBalance">Số dư khả dụng:</label><br>
-                <input type="number" id="availableBalance"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
-            </fieldset>
-
-            <label for="studentId">Mã số sinh viên:</label>
-            <div class="search-container">
-                <input  type="text" style="width: 100%; margin-bottom: 10px;" id="studentId" required><br>
-                <!-- <button type="button" id="btn-search-stu" class="search-button"><i class="fas fa-search"></i></button> -->
-            </div>
-           
-            
-            <fieldset disabled>
-                <label for="studentName">Họ tên sinh viên:</label><br>
-                <input required type="text" id="studentName"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"><br>
-
-                <label for="tuitionFee">Số tiền cần nộp:</label><br>
-                <input required type="number" id="tuitionFee"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
-
-               
-
-            </fieldset>
-            
+                  
+                  <!-- Lặp lại cho mỗi nhóm label-input -->
+                  
+                <fieldset disabled>
+                    
+                    <label for="depositorName">Người nộp tiền:</label>
+                    <input type="text" id="depositorName"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;" readonly><br>
     
-
-            <button type="submit" id="confirmButton" >Xác Nhận Giao Dịch</button>
-        </form>
+                    <label for="phoneNumber">Số điện thoại:</label>
+                    <input type="text" id="phoneNumber"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
+    
+                    <label for="email">Địa chỉ email:</label>
+                    <input type="email" id="email"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;" readonly><br>
+                    <label for="availableBalance">Số dư khả dụng:</label><br>
+                    <input type="number" id="availableBalance"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
+                </fieldset>
+    
+                <label for="studentId">Mã số sinh viên:</label>
+                <div class="search-container">
+                    <input  type="text" style="width: 100%; margin-bottom: 10px;" id="studentId" required><br>
+                    <!-- <button type="button" id="btn-search-stu" class="search-button"><i class="fas fa-search"></i></button> -->
+                </div>
+               
+                
+                <fieldset disabled>
+                    <label for="studentName">Họ tên sinh viên:</label><br>
+                    <input required type="text" id="studentName"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"><br>
+    
+                    <label for="tuitionFee">Số tiền cần nộp:</label><br>
+                    <input required type="number" id="tuitionFee"  style="width: 100%; margin-top: 10px; margin-bottom: 10px;"  readonly><br>
+    
+                   
+    
+                </fieldset>
+                
+        
+    
+                <button type="submit" id="confirmButton" >Xác Nhận Giao Dịch</button>
+            </form>
+        </div>
+       
     </div>
+    
+    
+    <div class="history">
+        <div style="display: flex; justify-content: space-between; align-items: center;margin: 10px;" class="nav">
+            <p>LỊCH SỬ GIAO DỊCH</p>
+            <button type="submit" id="logout_btn" >Đăng xuất</button>
+        </div>
+        <div id="list-item" class="item-container">
+            
+           
+        </div>
+       
+        
+    </div>
+
 </body>
 <script src="script/account.js"></script>
 </html>

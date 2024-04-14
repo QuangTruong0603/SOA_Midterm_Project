@@ -247,3 +247,5 @@ D:\KI2-NAM3\KIEN TRUC HUONG DICH VU\Midterm\auth\AccountStudentService\obj\Debug
 D:\KI2-NAM3\KIEN TRUC HUONG DICH VU\Midterm\auth\AccountStudentService\obj\Debug\net6.0\AccountStudentService.pdb
 D:\KI2-NAM3\KIEN TRUC HUONG DICH VU\Midterm\auth\AccountStudentService\obj\Debug\net6.0\AccountStudentService.genruntimeconfig.cache
 D:\KI2-NAM3\KIEN TRUC HUONG DICH VU\Midterm\auth\AccountStudentService\obj\Debug\net6.0\ref\AccountStudentService.dll
+D:\KI2-NAM3\KIEN TRUC HUONG DICH VU\Midterm\auth\AccountStudentService\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\KI2-NAM3\KIEN TRUC HUONG DICH VU\Midterm\auth\AccountStudentService\bin\Debug\net6.0\itextsharp.dll

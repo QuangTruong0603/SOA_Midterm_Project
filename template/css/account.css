@@ -3,16 +3,43 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 20px;
+  
+    display: flex;
 }
 
 .form-container {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: auto;
+    width: 100%;
+    
+    
 }
+.container{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.item-container{
+    max-height: 600px; /* Đặt chiều cao tối đa */
+    overflow: auto;
+}
+.item{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.history{
+    width: 50%;
+    
+  
+  }
 
 form {
     display: flex;
@@ -47,6 +74,16 @@ button {
     cursor: pointer;
 }
 
+#logout_btn{
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
 button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
@@ -56,17 +93,5 @@ button:disabled {
     display: inline-block;
 }
 
-.search-button {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    height: 90%;
-    padding: 0 10px;
-    background-color: transparent;
-    border: 1px solid #ccc; 
-    cursor: pointer;
-}
 
-.search-button i {
-    color: #555;
-}
+
